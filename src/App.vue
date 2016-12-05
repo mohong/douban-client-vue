@@ -29,7 +29,7 @@
         created() {
             this.$http.get('http://127.0.0.1:4000/').then((response) => {
                 this.movies = response.body;
-                console.log(this.movies);
+                // console.log(this.movies);
             });
         },
         components: {
@@ -45,6 +45,7 @@
         width: 100%
         height: 40px
         line-height: 40px
+        background: #fff
         .tab-item
             flex: 1
             text-align: center
