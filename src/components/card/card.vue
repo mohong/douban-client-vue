@@ -12,23 +12,16 @@
             <div class="cast">
                 主演：<span v-for="cast in movie.casts">{{cast.name}}&nbsp;</span>
             </div>
-
         </div>
     </div>
-    <movie></movie>
 </template>
 
 <script>
-    import movie from '../movie/movie.vue';
-
     export default {
         props: {
             movie: {
                 type: Object
             }
-        },
-        components: {
-            movie
         }
     };
 </script>
