@@ -5,7 +5,7 @@
                 <li @click="showMovie(movie)" v-for="movie in movies"><card :movie="movie"></card></li>
             </ul>
         </div>
-        <movie :id="selectMovie.id" v-ref:movie></movie>
+        <movie :movie="selectMovie" v-ref:movie></movie>
     </div>
 </template>
 

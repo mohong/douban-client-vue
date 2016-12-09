@@ -1,7 +1,7 @@
 <template>
     <div v-show="showFlag" class="movie" transition="move">
         <div class="movie-wrapper">
-            {{id}}
+            {{movie.title}}
             <button @click="show">返回</button>
         </div>
     </div>
@@ -10,17 +10,14 @@
 <script>
     export default {
         props: {
-            id: {
-                type: String
+            movie: {
+                type: Object
             }
         },
         data() {
             return {
                 showFlag: false
             };
-        },
-        created() {
-            console.log(this.id);
         },
         methods: {
             show() {
