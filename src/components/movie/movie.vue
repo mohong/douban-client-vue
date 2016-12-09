@@ -26,6 +26,19 @@
                     故事改编自二战上等兵军医戴斯蒙德·道斯的真实经历，他因为在冲绳岛战役中勇救75人生命而被授予美国国会荣誉勋章，同时也是首位获此荣誉的在战场上拒绝杀戮的医疗兵。
                 </p>
             </div>
+            <div class="director">
+                <h3>导演</h3>
+                <ul>
+                    <li v-for="director in movie.directors">
+                        <div class="avatar">
+                            <img width="105" height="150" :src="director.avatars.large">
+                        </div>
+                        <div class="name">
+                            <h3>{{director.name}}</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -104,12 +117,36 @@
             .description
                 padding: 20px
                 background: #fff
-                h1
-                    font-weight: bold
                 p
                     margin-top: 10px
                     text-indent: 2em
                     font-size: 12px
                     line-height: 20px
-                    color: rgba(41, 41, 41, 0.87)
+                    color: rgba(41, 41, 41, 0.7)
+            .director
+                margin-top: 20px
+                padding: 20px
+                background-color: #fff
+                ul
+                    display: flex
+                    justify-content: flex-start
+                    li
+                        flex: 0 0 105px
+                        width: 105px
+                        margin: 10px 20px 0 0
+                        position: relative
+                        .avatar
+                            width: 105px
+                        .name
+                            width: 105px
+                            text-align: center
+                            position: relative
+                            h3
+                                position: absolute
+                                width: 100%
+                                bottom: 3px
+                                line-height: 30px
+                                background-color: rgba(7, 17, 27, 0.7)
+                                font-size: 12px
+                                color: #fff
 </style>
