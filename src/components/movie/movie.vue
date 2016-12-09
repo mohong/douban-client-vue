@@ -16,6 +16,9 @@
                     </div>
                 </div>
                 <div class="back" @click="show"><span>◁ 返回</span></div>
+                <div class="background">
+                    <img :src="movie.images.large">
+                </div>
             </div>
         </div>
     </div>
@@ -59,9 +62,11 @@
                 position: relative
                 display: flex
                 padding: 45px 10px 20px 20px
-                background-color: #fff
+                background-color: rgba(7, 17, 27, 0.1)
+                color: #fff
                 .images
                     flex: 0 0 96px
+                    border: 2px solid #fff
                 .info
                     flex: 1
                     margin-left: 10px
@@ -69,7 +74,6 @@
                     div
                         width: 100%
                         font-size: 12px
-                        color: rgb(7, 17, 27, 0.1)
                         line-height: 20px
                     .title
                         font-size: 18px
@@ -79,5 +83,17 @@
                     left: 10px
                     top: 10px
                     padding: 6px
+                .background
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    overflow: hidden
+                    filter: blur(10px)
+                    z-index: -10
+                    img
+                        width: 100%
+                        height: 100%
 
 </style>
