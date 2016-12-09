@@ -1,8 +1,22 @@
 <template>
     <div v-show="showFlag" class="movie" transition="move">
         <div class="movie-wrapper">
-            {{movie.title}}
-            <button @click="show">返回</button>
+            <div class="header">
+                <div class="images">
+                    <img width="96" height="150" :src="movie.images.large">
+                </div>
+                <div class="info">
+                    <div class="title">{{movie.title}}</div>
+                    <div class="rate">评分：{{movie.rating.average}}分</div>
+                    <div class="type">
+                        类型：<span v-for="type in movie.genres">{{type}}、</span>
+                    </div>
+                    <div class="cast">
+                        主演：<span v-for="cast in movie.casts">{{cast.name}}&nbsp;</span>
+                    </div>
+                </div>
+                <div class="back" @click="show"><span>◁ 返回</span></div>
+            </div>
         </div>
     </div>
 </template>
@@ -40,4 +54,30 @@
             transform: translate3d(0, 0, 0)
         &.move-enter,&.move-leave
             transform: translate3d(100%, 0, 0)
+        .movie-wrapper
+            .header
+                position: relative
+                display: flex
+                padding: 45px 10px 20px 20px
+                background-color: #fff
+                .images
+                    flex: 0 0 96px
+                .info
+                    flex: 1
+                    margin-left: 10px
+                    overflow: hidden
+                    div
+                        width: 100%
+                        font-size: 12px
+                        color: rgb(7, 17, 27, 0.1)
+                        line-height: 20px
+                    .title
+                        font-size: 18px
+                        margin-bottom: 10px
+                .back
+                    position:absolute
+                    left: 10px
+                    top: 10px
+                    padding: 6px
+
 </style>
