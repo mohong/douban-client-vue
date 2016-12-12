@@ -8,7 +8,7 @@
                 <a v-link="{path: '/coming_soon'}">期待</a>
             </div>
             <div class="tab-item">
-                <a v-link="{path: '/review'}">影库</a>
+                <a v-link="{path: '/top250'}">TOP250</a>
             </div>
         </div>
         <router-view keep-alive></router-view>
