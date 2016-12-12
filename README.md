@@ -1,6 +1,6 @@
-# douban-client-vue
+# douban-vue
 
-> A Vue.js project
+> 基于webpack+vue的豆瓣电影，由“热映”，“期待”，“top250”三个版块组成，组件化开发，数据接口来源于豆瓣api
 
 ## Build Setup
 
@@ -14,14 +14,5 @@ npm run dev
 # build for production with minification
 npm run build
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

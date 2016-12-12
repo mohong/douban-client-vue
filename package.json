@@ -1,5 +1,5 @@
 {
-  "name": "douban-client-vue",
+  "name": "douban-vue",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "mohong <522916411@qq.com>",
@@ -39,6 +39,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
     "function-bind": "^1.0.2",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.12.0",
     "json-loader": "^0.5.4",
