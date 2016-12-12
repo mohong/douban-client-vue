@@ -4,7 +4,7 @@ import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
 import comingSoon from './components/coming_soon/coming_soon.vue';
 import inTheaters from './components/in_theaters/in_theaters.vue';
-import top250 from './components/top250/top250.vue';
+import review from './components/review/review.vue';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -22,8 +22,8 @@ router.map({
 	'/in_theaters': {
 		component: inTheaters
 	},
-	'/top250': {
-		component: top250
+	'/review': {
+		component: review
 	}
 });
 
