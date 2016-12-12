@@ -1,6 +1,6 @@
 # douban-vue
 
-> 基于webpack+vue的豆瓣电影，由“热映”，“期待”，“top250”三个版块组成，组件化开发，数据接口来源于豆瓣api
+> 基于webpack+vue的豆瓣电影，由“热映”，“期待”，“top250”三个版块组成，组件化开发，数据接口来源于豆瓣api，[在线演示](http://arthas.com.cn/douban-vue/#!/in_theaters)
 
 ![项目截图](http://arthas.com.cn/images/douban1212.png)
 
