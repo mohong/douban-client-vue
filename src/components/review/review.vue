@@ -1,9 +1,17 @@
 <template>
-    <div>搜索页面</div>
+    <div class="rewiew">
+        <search></search>
+    </div>
 </template>
 
 <script>
-    export default {};
+    import search from '../search/search.vue';
+
+    export default {
+        components: {
+            search
+        }
+    };
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
