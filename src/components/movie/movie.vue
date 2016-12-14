@@ -31,7 +31,7 @@
                 <div class="pics-wrapper" v-el:pics-wrapper>
                     <ul class="pics-list" v-el:pics-list>
                         <li class="pic-item" v-for="pic in movie.related_pic">
-                            <img width="100" height="100" :src="pic">
+                            <img width="150" height="84" :src="pic">
                         </li>
                     </ul>
                 </div>
@@ -67,9 +67,8 @@
                 this.showFlag = !this.showFlag;
             },
             _initPics() {
-                console.log(this.movie);
                 if (this.movie.related_pic) {
-                    let picWidth = 120;
+                    let picWidth = 150;
                     let margin = 6;
                     let width = (picWidth + margin) * this.movie.related_pic.length - margin;
                     this.$els.picsList.style.width = width + 'px';
