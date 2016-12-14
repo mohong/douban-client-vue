@@ -1,8 +1,10 @@
 <template>
-    <div class="coming_soon">
-        <div class="coming_soon-wrapper" v-el:coming_soon>
+    <div class="nowplaying">
+        <div class="nowplaying-wrapper" v-el:nowplaying>
             <ul>
-                <li @click="showMovie(movie)" v-for="movie in movies"><card :movie="movie"></card></li>
+                <li @click="showMovie(movie)" v-for="movie in movies">
+                    <card :movie="movie"></card>
+                </li>
             </ul>
         </div>
         <movie :movie="selectMovie" v-ref:movie></movie>
@@ -16,14 +18,14 @@
 
     export default {
         data() {
-            return {
-                movies: [],
-                selectMovie: {}
-            };
+          return {
+              movies: [],
+              selectMovie: {}
+          };
         },
         created() {
-            this.$http.jsonp('https://api.douban.com/v2/movie/coming_soon').then((response) => {
-                this.movies = response.body.subjects;
+            this.$http.get('http://192.168.1.111:4000/api/movie/nowplaying').then((response) => {
+                this.movies = response.body;
                 this.$nextTick(() => {
                     this._initScroll();
                 });
@@ -31,7 +33,7 @@
         },
         methods: {
             _initScroll() {
-                this.coming_sooncroll = new BScroll(this.$els.coming_soon, {
+                this.nowplayingcroll = new BScroll(this.$els.nowplaying, {
                     click: true
                 });
             },
@@ -48,8 +50,8 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-    .coming_soon
-        .coming_soon-wrapper
+    .nowplaying
+        .nowplaying-wrapper
             position: absolute
             display: block
             width: 100%

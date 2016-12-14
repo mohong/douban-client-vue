@@ -1,16 +1,16 @@
 <template>
     <div class="card">
         <div class="images">
-            <img width="65" height="100" :src="movie.images.small">
+            <img width="65" height="100" :src="movie.post">
         </div>
         <div class="info">
             <div class="title">{{movie.title}}</div>
-            <div class="rate">评分：{{movie.rating.average}}分</div>
+            <div class="rate">评分：{{movie.rate}}分</div>
             <div class="type">
-                类型：<span v-for="type in movie.genres">{{type}}、</span>
+                类型：<span v-for="type in movie.genre">{{type}}、</span>
             </div>
             <div class="cast">
-                主演：<span v-for="cast in movie.casts">{{cast.name}}&nbsp;</span>
+                主演：<span v-for="cast in movie.actors">{{cast.name}}&nbsp;</span>
             </div>
         </div>
     </div>

@@ -2,9 +2,10 @@ import Vue from 'vue';
 import App from './App';
 import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
-import comingSoon from './components/coming_soon/coming_soon.vue';
-import inTheaters from './components/in_theaters/in_theaters.vue';
-import top250 from './components/top250/top250.vue';
+import nowplaying from './components/nowplaying/nowplaying.vue';
+import comingsoon from './components/comingsoon/comingsoon.vue';
+import review from './components/review/review.vue';
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
@@ -15,17 +16,17 @@ let router = new VueRouter({
 });
 
 router.map({
-	'/coming_soon': {
-		component: comingSoon
+	'/nowplaying': {
+		component: nowplaying
 	},
-	'/in_theaters': {
-		component: inTheaters
+	'/comingsoon': {
+		component: comingsoon
 	},
-	'/top250': {
-		component: top250
+	'/review': {
+		component: review
 	}
 });
 
 router.start(app, '#app');
 
-router.go('/in_theaters');
+router.go('/nowplaying');
